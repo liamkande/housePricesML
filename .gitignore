@@ -1,0 +1,8 @@
+# Ignore files by name
+kc_house_data.csv
+
+# Ignore files in a specific directory
+/docs/secrets.txt
+
+# Ignore files in the root directory
+/node_modules
