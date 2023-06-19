@@ -19,8 +19,8 @@ function knn(features, labels, predictionPoint, k) {
 let { features, labels, testFeatures, testLabels } = loadCSV("kc_house_data.csv", {
     shuffle: true,
     splitTest: 10,
-    dataColumns: ["lat", "long"],
-    labelColumns: ["price"]
+    dataColumns: ['lat', 'long', 'sqft_lot'],
+    labelColumns: ['price']
 });
 
 labels = tf.tensor(labels); // Convert labels to a tensor
@@ -33,6 +33,5 @@ testFeatures.forEach((testPoint, i) => {
 
     console.log("Guess:", result, "Actual:", testLabels[1][0]);
     console.log("Error:", err * 100);
-
 });
 
